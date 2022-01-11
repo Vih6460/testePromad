@@ -1,11 +1,3 @@
-<?php
-
-// session_start();
-
-// unset($_SESSION['conta']);
-
-?>
-
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -24,9 +16,9 @@
 
     <div class="cardLogin">
       <div class="d-flex justify-content-center">
-          <h2>Área de Login</h2>
+          <h2>Cadastrar Usuário</h2>
       </div>
-      <form id="formLogin">
+      <form id="formCadastro">
         <div class="mb-3">
           <label for="inputLogin" class="form-label">Email</label>
           <input type="email" class="form-control" name="inputLogin" id="inputLogin" aria-describedby="emailHelp">
@@ -35,8 +27,9 @@
           <label for="inputSenha" class="form-label">Senha</label>
           <input type="password" class="form-control" name="inputSenha" id="inputSenha">
         </div>
-        <div class="d-flex justify-content-center">
-          <button type="submit" class="btn btn-primary">Entrar</button>
+        <div class="d-flex justify-content-around">
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+          <button type="button" id="btnSair" class="btn btn-primary">Sair</button>
         </div>
       </form>
     </div>
@@ -50,6 +43,12 @@
     <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <!-- Personal Script -->
-    <script src="./src/js/login.js"></script>
+    <script src="./src/js/cadastroUsuario.js"></script>
+
+    <script>
+        document.getElementById("btnSair").onclick = function () {
+            location.href = "./index.php";
+        };
+    </script>
   </body>
 </html>
